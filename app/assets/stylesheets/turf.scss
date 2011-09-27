@@ -1,0 +1,100 @@
+@mixin gradient($from, $to){
+  background:-webkit-gradient(linear,left top,left bottom,from($from),to($to));
+  background:-moz-linear-gradient(top,$from,$to);
+}
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // // //
+
+$light_blue : rgba(77,174,216,1);
+$med_blue   : rgba(40,50,60,1);
+$dark_blue  : rgba(4,5,6,1);
+
+html,
+body {
+  position: relative;
+  width: 100%; height: 100%;
+  min-width: 768px;
+  font: 12px/normal "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #FFF;
+  background: #EEE;
+}
+
+a {
+  text-decoration: none;
+  color: $light_blue;
+}
+
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // // //
+
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 31px;
+  padding: 7px 20px;
+  @include gradient($med_blue, $dark_blue);
+
+  #logo {
+    display: block;
+    width: 60px; height: 31px;
+    background: url('/assets/logo.png') no-repeat scroll top left;
+    text-indent: -9999em;
+  }
+
+  nav {
+    position: absolute;
+    top: 7px; right: 20px;
+    height: 31px;
+    a {
+      display: block;
+      float: left;
+      margin-left: 7px;
+      border-radius: 3px;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.7);
+      @include gradient($med_blue, $dark_blue);
+
+      &:hover {
+        color: rgba(255,255,255,0.95);
+        border-color: rgba(255,255,255,0.3);
+      }
+
+      &:active {
+        @include gradient($dark_blue,$med_blue);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0);
+        border-top-color: rgba(255,255,255,0.1);
+      }
+
+      &.square {
+        width: 29px;
+        height: 29px;
+      }
+
+      &.rectangle {
+        height: 29px;
+        padding: 0 16px;
+        font-size: 13px;
+        line-height: 29px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+#map {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/assets/map.png') no-repeat scroll center center;
+}
