@@ -1,14 +1,60 @@
 <header>
   <a href="/" id="logo">Turf</a>
-  
+
   <nav>
-    <a href="#" class="rectangle">Map<b>&#9660;</b></a>
-    <a href="#" class="rectangle">Layers<b>&#9660;</b></a>    
+    <a href="#map-settings" class="rectangle flydown-trigger">Map<b>&#9660;</b></a>
+    <a href="#layers" class="rectangle flydown-trigger">Layers<b>&#9660;</b></a>
     <a href="#" class="square polygon"><b>New Polygon</b></a>
     <a href="#" class="square marker"><b>New Marker</b></a>
     <a href="#" class="square settings"><b>Settings</b></a>
-                    
   </nav>
+
+  <div id="map-settings" class="flydown">
+    <h3>Settings</h3>
+    <form action="#">
+      <label>Map Name</label>
+      <input type="text" value="Manhattan Eateries" />
+
+      <div class="sxs">
+        <fieldset>
+          <label>Map Type</label>
+          <select>
+            <option>Terrain</option>
+            <option>Hybrid</option>
+            <option>Satellite</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label>Zoom</label>
+          <select>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+          </select>
+        </fieldset>
+      </div>
+
+      <a href="#map-settings" class="button right flydown-trigger">Save</a>
+    </form>
+  </div>
+
+  <div id="layers" class="flydown">
+    <ul>
+      <li><a href="#" class="checkbox"><b>√</b></a>Italian</li>
+      <li><a href="#" class="checkbox active"><b>√</b></a>Mexican</li>
+      <li><a href="#" class="checkbox"><b>√</b></a>Thai</li>
+      <li><a href="#" class="checkbox"><b>√</b></a>Japanese/Sushi</li>
+      <li><a href="#" class="checkbox active"><b>√</b></a>Chinese</li>
+      <li><a href="#" class="checkbox active"><b>√</b></a>Mediterranean</li>
+      <li><a href="#" class="checkbox"><b>√</b></a>Pubs</li>
+      <li><a href="#" class="checkbox"><b>√</b></a>American</li>
+    </ul>
+  </div>
+
+
 </header>
 
 <section id="map">
