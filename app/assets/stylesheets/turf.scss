@@ -71,6 +71,11 @@ header {
       &.square {
         width: 29px;
         height: 29px;
+        b {
+          display: block;
+          width: 100%; height: 100%;
+          text-indent: -9999em;
+        }
       }
 
       &.rectangle {
@@ -79,7 +84,18 @@ header {
         font-size: 13px;
         line-height: 29px;
         font-weight: bold;
+        b {
+          display: inline-block;
+          font-size: 10px;
+          line-height: 29px;
+          margin-left: 5px;
+        }
       }
+
+      &.marker b { background: url('/assets/icons/marker.png') 50% 50% no-repeat; }
+      &.polygon b { background: url('/assets/icons/polygon.png') 50% 50% no-repeat; }
+      &.settings b { background: url('/assets/icons/settings.png') 50% 50% no-repeat; }
+
     }
   }
 }
